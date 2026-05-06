@@ -24,14 +24,42 @@ To achieve high-accuracy phenology extraction, this tool applies the following m
 
 ## Example Transformation
 
-### 1. Input: Cumulative Area Time Series
-The tool processes raw cumulative percentages. For example, **Corn in Wisconsin (2018)**:
+### Example: Accumulated Area Proportion Time Series
+*Example data for Corn in Wisconsin, 2018. Values represent the percentage of total cornfield area reaching each stage.*
 
-| Date | Corn - Planted | Corn - Silking | Corn - Harvested |
-| :--- | :---: | :---: | :---: |
-| 4/29/2018 | 3% | - | - |
-| 7/15/2018 | 100% | 30% | - |
-| 11/25/2018 | 100% | 100% | 88% |
+| Date | Corn - Dented | Corn - Dough | Corn - Emerged | Corn - Harvested | Corn - Mature | Corn - Planted | Corn - Silking |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 4/29/2018 | | | | | | 3 | |
+| 5/6/2018 | | | | | | 15 | |
+| 5/13/2018 | | | 8 | | | 30 | |
+| 5/20/2018 | | | 21 | | | 56 | |
+| 5/27/2018 | | | 48 | | | 81 | |
+| 6/3/2018 | | | 75 | | | 89 | |
+| 6/10/2018 | | | 87 | | | | |
+| 6/17/2018 | | | 96 | | | | |
+| 6/24/2018 | | | | | | | |
+| 7/1/2018 | | | | | | | 1 |
+| 7/8/2018 | | | | | | | 6 |
+| 7/15/2018 | | | | | | | 30 |
+| 7/22/2018 | | | | | | | 53 |
+| 7/29/2018 | | 8 | | | | | 76 |
+| 8/5/2018 | | 28 | | | | | 87 |
+| 8/12/2018 | 4 | 45 | | | | | |
+| 8/19/2018 | 18 | 62 | | | | | |
+| 8/26/2018 | 36 | 77 | | | 1 | | |
+| 9/2/2018 | 54 | 86 | | | 8 | | |
+| 9/9/2018 | 70 | | | | 21 | | |
+| 9/16/2018 | 82 | | | 1 | 36 | | |
+| 9/23/2018 | 91 | | | 4 | 55 | | |
+| 9/30/2018 | | | | 10 | 73 | | |
+| 10/7/2018 | | | | 14 | 84 | | |
+| 10/14/2018 | | | | 19 | 93 | | |
+| 10/21/2018 | | | | 31 | | | |
+| 10/28/2018 | | | | 46 | | | |
+| 11/4/2018 | | | | 59 | | | |
+| 11/11/2018 | | | | 69 | | | |
+| 11/18/2018 | | | | 80 | | | |
+| 11/25/2018 | | | | 88 | | | |
 
 ### 2. Output: Extracted Phenology (DOY)
 The final output provides the specific DOY for each stage:
